@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="header">
+    <h1>
+      Etch-a-Sketch
+    </h1>
+  </div>
+  <div id="main">
+    <div id="sidebar">
+      <div class="options">
+        <div class="options color">
+          <h3>Color</h3>
+          <input type="color" name="change-color" id="color-picker" onchange="changeColor()"> 
+        </div>
+        <div class="options rave-draw">
+          <button id="rave" onclick="raveMode()">Rave Mode</button>
+        </div>
+        <div class="options erase">
+          <button id="eraser" onclick="eraseCells()">Erase</button>
+        </div>
+        <div class="options clear">
+          <button id="clear-grid" onclick="clearCells()">Clear</button>
+        </div>
+        <div class="options grid-size">
+          <h3>
+            Grid Size:
+          </h3>
+          <input type="range" id="size-slider" onchange="createGrid()" value="16" min="1" max="64">
+          <h3 id="dimensions"></h3>
+        </div>
+      </div>
+    </div>
+    <div id="grid">
+    </div>
+  </div>
+  <div id="footer"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>
