@@ -2,6 +2,7 @@ const canvasSize = 500;
 const grid = document.getElementById('grid');
 const slider = document.getElementById('size-slider');
 const colorPicker = document.getElementById('color-picker');
+let colorPickerWrapper = document.getElementById("color-picker-wrapper");
 let currentColor = '#000000';
 let currentMode = 'normal';
 
@@ -80,6 +81,6 @@ function clearCells() {
 }
 
 createGrid();
-colorPicker.addEventListener('click', () => {
+colorPicker.addEventListener('change', () => {
 	currentColor = colorPicker.value;
 });
